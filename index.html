@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>
+            Project 78
+        </title>
+    </head>
+    <body>
+        <center style="margin-top: 40px; background-color: coral;">
+            <h1>
+                My Family Book
+            </h1>
+
+            <img src="https://i.postimg.cc/MKdhy06Z/family.jpg" style="width: 30%;" id="family_member_image">
+            <h4 id="family_member_name">Family Name</h4>
+            <button onclick="update();">Next</button>
+        </center>
+
+        <script>
+            var images = ["https://i.postimg.cc/MKdhy06Z/family.jpg","https://lh3.googleusercontent.com/proxy/LLZoTBXcb7_6RLhBvInpyrdumf235BbQVhdsvPVblxY1rWiB3RjroWzou8RQ8KUN_rNXIStu0600Ob4PeahtT0yS95ZtS8OTniyy", "https://thumbs.dreamstime.com/b/grandmother-portrait-cute-old-woman-bag-walking-stick-wearing-glasses-short-grey-hair-senior-lady-walk-grandma-86364329.jpg" , "https://thumbs.dreamstime.com/b/illustration-cartoon-father-carrying-son-his-arms-cartoon-father-carrying-son-his-arms-145730921.jpg", "https://i.postimg.cc/JnL6wtrd/sister.jpg", "https://i.postimg.cc/bw5W5zSK/mother.jpg"];
+            var names = ["Family Name","Grandfather's name", "Grandmother's name", "Father's name", "Mother's name", "Brother/sister"];
+            var i = 0;
+            function update()
+            {
+                i++;
+                var numbers_of_family_member_in_array = 5
+                if(i > numbers_of_family_member_in_array )
+                {
+                    i = 0;
+                }
+                var updatedImage = images[i];
+                var updatedName  = names[i];
+                document.getElementById("family_member_image").src = updatedImage;
+                document.getElementById("family_member_name").innerHTML = updatedName;
+            }
+
+        </script>
+
+
+    </body>
+</html>
